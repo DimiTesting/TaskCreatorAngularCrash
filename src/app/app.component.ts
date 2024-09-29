@@ -11,5 +11,5 @@ import { TasksComponent } from './components/tasks/tasks.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+
 }
