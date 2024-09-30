@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UiService } from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
@@ -10,13 +12,20 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'Crash Project';
-  constructor() {}
+  showAddTask: boolean;
+  subscription: Subscription;
+
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService
+      .onToggle()
+      .subscribe((value)=> this.showAddTask = value);
+  }
 
   ngOnInit(): void {
       
   }
 
   toggleAddTask() {
-    console.log('toggle');
+    this.uiService.toggleAddTask();
   }
 }
