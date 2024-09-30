@@ -17,6 +17,12 @@
       "text": "Food Shopping",
       "day": "May 7th at 12:30pm",
       "reminder": false
+    },
+    {
+      "id": "b731",
+      "text": "Finish the Tracker crash project",
+      "day": "Sep 30th at 19:00",
+      "reminder": false
     }
   ]
 }
